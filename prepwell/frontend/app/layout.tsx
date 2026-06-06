@@ -1,6 +1,13 @@
+/* =============================================================================
+ *  File:        frontend/app/layout.tsx
+ *  Description: Root layout: theme bootstrap, metadata, and global site footer.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import type { Metadata } from "next";
 import "./globals.css";
 import { appConfig } from "@/app.config";
+import { SiteFooter } from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: `${appConfig.fullName} — ${appConfig.tagline}`,
@@ -26,7 +33,12 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body>{children}</body>
+      <body>
+        <div className="flex min-h-screen flex-col">
+          <div className="flex-1">{children}</div>
+          <SiteFooter />
+        </div>
+      </body>
     </html>
   );
 }

@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/components/games/CountShapes.tsx
+ *  Description: Count-the-shapes brain game.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useMemo, useState } from "react";
 import { genCountShapes, type GameOutcome, type Glyph as GlyphData } from "@/lib/brainGames";
 import Glyph from "./Glyph";

@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/storage/db.py
+#  Description: SQLite layer: auth, students, sessions, and asked-question history.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """SQLite storage for auth, students, sessions, and asked-question index.
 
 Mental models and full question objects live as JSON files (see files.py); SQLite

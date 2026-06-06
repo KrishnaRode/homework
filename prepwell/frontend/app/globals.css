@@ -1,3 +1,9 @@
+/* =============================================================================
+ *  File:        frontend/app/globals.css
+ *  Description: Global styles, design tokens, and playful brand animations.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 @import "tailwindcss";
 
 /* ── Design tokens — playful + premium. Bright, friendly colours for kids while
@@ -139,43 +145,58 @@ body::before {
 
 /* Logo tile gives a gentle wave on hover. */
 .brand-logo-wrap { position: relative; display: inline-grid; }
-.brand-tile { position: relative; z-index: 1; }
+.brand-tile {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 7px 20px -9px color-mix(in srgb, var(--accent) 75%, transparent);
+}
 .brand:hover .brand-tile { animation: brand-wave 0.7s ease; }
 @keyframes brand-wave {
-  0%, 100% { transform: rotate(0); }
-  30% { transform: rotate(-10deg); }
-  60% { transform: rotate(8deg); }
+  0%, 100% { transform: rotate(0) scale(1); }
+  30% { transform: rotate(-9deg) scale(1.04); }
+  60% { transform: rotate(7deg) scale(1.04); }
 }
 
-/* Peek-a-boo stage: clips the mascot so it appears to rise from behind the
-   logo's top edge. Lives behind the tile (z-index 0); tile sits in front. */
+/* Mascot "play stage": covers the logo box. The buddy rests tucked behind the
+   tile (only its head peeks above), then every cycle JUMPS to the front and hops
+   around the logo before ducking back. The stage's z-index flips so the buddy can
+   pass in front of the tile while it plays. Hovering brings it out to play now. */
 .brand-stage {
   position: absolute;
-  left: 50%;
-  bottom: 18px;
-  width: 30px;
-  height: 26px;
-  transform: translateX(-50%);
-  overflow: hidden;
-  z-index: 0;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 0;                 /* behind the tile at rest */
   pointer-events: none;
+  animation: brand-buddy-layer 11s ease-in-out infinite;
 }
-.brand-peek {
-  display: block;
-  width: 30px;
-  height: 30px;
-  transform: translateY(8%); /* resting peek (also the reduced-motion state) */
-  animation: brand-peekaboo 6.5s ease-in-out infinite;
-  transition: transform 0.25s ease;
+.brand-buddy {
+  width: 72%;
+  height: 72%;
+  transform: translate(0, -34%) scale(0.58);  /* resting peek (reduced-motion state) */
+  transform-origin: center bottom;
+  animation: brand-playtime 11s ease-in-out infinite;
 }
-.brand:hover .brand-peek {
-  animation: none;
-  transform: translateY(-6%) rotate(-4deg); /* pop fully up + tilt on hover */
+@keyframes brand-buddy-layer {
+  0%, 44% { z-index: 0; }      /* behind the tile while hiding */
+  46%, 92% { z-index: 3; }     /* in front while it plays */
+  94%, 100% { z-index: 0; }
 }
-@keyframes brand-peekaboo {
-  0%, 14% { transform: translateY(105%); }       /* hidden behind the tile */
-  30%, 58% { transform: translateY(6%) rotate(2deg); }  /* peeking */
-  74%, 100% { transform: translateY(105%); }     /* duck back down */
+@keyframes brand-playtime {
+  0%, 40%   { transform: translate(0, -34%) scale(0.58); }              /* peeking, behind */
+  48%       { transform: translate(0, -90%) scale(1) rotate(0deg); }    /* jump up, in front */
+  58%       { transform: translate(118%, -38%) scale(0.95) rotate(12deg); }  /* hop right of logo */
+  68%       { transform: translate(0, -100%) scale(1.03) rotate(0deg); }     /* hop over the top */
+  78%       { transform: translate(-118%, -38%) scale(0.95) rotate(-12deg); }/* hop left of logo */
+  86%       { transform: translate(0, -84%) scale(1) rotate(0deg); }    /* back to centre, wave */
+  94%, 100% { transform: translate(0, -34%) scale(0.58); }             /* duck back behind */
+}
+/* On hover: pop to the front and bounce happily above the logo. */
+.brand:hover .brand-stage { z-index: 3; animation: none; }
+.brand:hover .brand-buddy { animation: brand-hop 0.85s ease-in-out infinite; }
+@keyframes brand-hop {
+  0%, 100% { transform: translate(0, -84%) scale(1) rotate(-4deg); }
+  50%      { transform: translate(0, -112%) scale(1.06) rotate(4deg); }
 }
 .brand-eyes {
   transform-box: fill-box;

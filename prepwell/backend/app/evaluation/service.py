@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/evaluation/service.py
+#  Description: Answer evaluation: deterministic checks + LLM rubric scoring.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Answer evaluation: deterministic where possible, LLM rubric otherwise.
 
 After grading, the student's mental model is updated and the next difficulty/type

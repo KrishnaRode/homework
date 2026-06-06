@@ -1,3 +1,9 @@
+/* =============================================================================
+ *  File:        frontend/app/page.tsx
+ *  Description: Landing page: hero, feature highlights, and call to action.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import Link from "next/link";
 import { appConfig } from "@/app.config";
 import { BrandHeader, SeriesChip } from "@/components/Brand";
@@ -94,10 +100,6 @@ export default function Landing() {
             </div>
           ))}
         </section>
-
-        <footer className="mt-20 border-t border-border-soft py-8 text-center text-sm text-text-faint">
-          {appConfig.series} · PrepWell runs entirely on your device.
-        </footer>
       </main>
     </div>
   );

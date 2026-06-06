@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/admin/router.py
+#  Description: Admin API: create students, issue credentials, manage roster.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Admin panel API: manage students, view progress, syllabus, export reports."""
 from __future__ import annotations
 

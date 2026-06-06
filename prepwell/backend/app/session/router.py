@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/session/router.py
+#  Description: Practice session API: start, next question, answer, stop/summary.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """The adaptive learning loop: start -> next -> answer -> stop/summary."""
 from __future__ import annotations
 

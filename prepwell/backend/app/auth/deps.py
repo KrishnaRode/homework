@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/auth/deps.py
+#  Description: FastAPI dependencies for resolving and guarding the current user.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """FastAPI auth dependencies."""
 from __future__ import annotations
 

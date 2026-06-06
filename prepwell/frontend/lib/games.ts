@@ -1,3 +1,9 @@
+/* =============================================================================
+ *  File:        frontend/lib/games.ts
+ *  Description: Loading/brain-game status line copy.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 // Loading/brain-training framing strings shown while the next academic question is
 // generated in the background. The actual wait-time fillers are now GRAPHICAL brain
 // games (see lib/brainGames.ts + components/games/*) — there are no text quizzes here

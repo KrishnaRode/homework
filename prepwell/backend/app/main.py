@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/main.py
+#  Description: FastAPI app factory: CORS, startup seeding, health, route wiring.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """PrepWell FastAPI app — local-first AI learning agent.
 
 Two-service architecture: this backend owns Ollama, storage, and the adaptive engine;

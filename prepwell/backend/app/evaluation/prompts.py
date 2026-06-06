@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/evaluation/prompts.py
+#  Description: Prompt builders for LLM-graded subjective answers.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Rubric prompt for grading subjective answers. Strict JSON output."""
 from __future__ import annotations
 

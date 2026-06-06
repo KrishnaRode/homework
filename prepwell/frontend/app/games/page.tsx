@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/app/games/page.tsx
+ *  Description: Standalone brain-games arcade (non-academic warm-ups).
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import MemoryGrid from "@/components/games/MemoryGrid";

@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/app/login/page.tsx
+ *  Description: Login page for admin-created student and admin accounts.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { appConfig } from "@/app.config";

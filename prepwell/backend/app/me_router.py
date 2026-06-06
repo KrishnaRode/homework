@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/me_router.py
+#  Description: Current-user routes: profile, mental model, and progress summary.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Student self-service: own progress + own report (no admin needed)."""
 from __future__ import annotations
 

@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/components/games/MemoryGrid.tsx
+ *  Description: Memory grid brain game.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { genMemoryGrid, type GameOutcome } from "@/lib/brainGames";
 

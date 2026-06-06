@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/guardrails/service.py
+#  Description: Child-safety filtering, grade-appropriate language, JSON repair.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Child-safety and quality guardrails. Local, deterministic, no external calls."""
 from __future__ import annotations
 

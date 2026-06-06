@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/components/games/PatternNext.tsx
+ *  Description: Pattern-completion brain game.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useMemo, useState } from "react";
 import { genPatternNext, type GameOutcome } from "@/lib/brainGames";
 import Glyph from "./Glyph";

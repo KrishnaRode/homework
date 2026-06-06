@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/auth/router.py
+#  Description: Authentication API: login and session token issuance.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Auth routes: login for students and admin."""
 from __future__ import annotations
 

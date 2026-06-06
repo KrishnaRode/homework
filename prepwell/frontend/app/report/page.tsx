@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/app/report/page.tsx
+ *  Description: Student progress report view.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandHeader } from "@/components/Brand";

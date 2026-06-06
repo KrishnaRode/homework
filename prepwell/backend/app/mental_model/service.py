@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/mental_model/service.py
+#  Description: Per-student mental model: accuracy/speed/confidence + next-step planning.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """The student mental model: the heart of PrepWell's personalization.
 
 Stored as one JSON file per student in data/students/<id>.json. Updated after every

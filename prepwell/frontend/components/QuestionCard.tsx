@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/components/QuestionCard.tsx
+ *  Description: Question renderer: passage, MCQ/text input, and submit.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useEffect, useState } from "react";
 import type { Question } from "@/lib/types";
 

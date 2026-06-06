@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+# =============================================================================
+#  File:        run.sh
+#  Description: One-command launcher: Ollama, FastAPI backend, and Next.js frontend.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 # ─────────────────────────────────────────────────────────────
 #  PrepWell — one-command launcher (macOS / Linux)
 #  Starts Ollama, the FastAPI backend, and the Next.js frontend.

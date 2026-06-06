@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/auth/security.py
+#  Description: Password hashing and signed-token helpers (local-only).
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Local password hashing + stateless signed tokens (no external deps, local-only)."""
 from __future__ import annotations
 

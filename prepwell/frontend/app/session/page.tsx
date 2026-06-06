@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/app/session/page.tsx
+ *  Description: Practice session flow: question, answer, and adaptive loading.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useCallback, useEffect, useRef, useState } from "react";
 import AnswerView from "@/components/AnswerView";
@@ -163,7 +168,9 @@ function SessionInner() {
           </div>
         )}
 
-        {(phase === "starting" || phase === "loading" || phase === "evaluating") && <LoadingState />}
+        {(phase === "starting" || phase === "loading" || phase === "evaluating") && (
+          <LoadingState first={phase === "starting"} />
+        )}
 
         {phase === "question" && question && (
           <QuestionCard question={question} onSubmit={submitAnswer} />
