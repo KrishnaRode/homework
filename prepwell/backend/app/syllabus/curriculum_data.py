@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/syllabus/curriculum_data.py
+#  Description: Normalized NCERT-based curriculum + board registry (classes 1-10).
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Curated, in-code curriculum source of truth.
 
 PrepWell stays local-first: this curriculum is curated from the standard published

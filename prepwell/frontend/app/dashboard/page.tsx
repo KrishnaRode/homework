@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/app/dashboard/page.tsx
+ *  Description: Student dashboard: subjects, topics, and session launch.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandHeader } from "@/components/Brand";

@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/lib/auth.ts
+ *  Description: Client-side session helpers (read/store the logged-in user).
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import type { Session } from "./types";
 
 const KEY = "prepwell_session";

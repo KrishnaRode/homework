@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/syllabus/service.py
+#  Description: Syllabus resolution with graceful board -> curriculum -> NCERT fallback.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Syllabus loading + lookups — board-aware.
 
 Resolution order for (board, class, subject):

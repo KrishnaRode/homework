@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/components/ThemeToggle.tsx
+ *  Description: Light/dark theme toggle persisted to localStorage.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {

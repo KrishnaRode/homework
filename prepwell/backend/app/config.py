@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/config.py
+#  Description: Central configuration: model, ports, secrets, question types, limits.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Central configuration. All values overridable via environment (.env)."""
 from __future__ import annotations
 

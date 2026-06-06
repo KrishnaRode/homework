@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/question_engine/prompts.py
+#  Description: Prompt builders for adaptive questions and comprehension sets.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Prompt builders for question generation. All outputs requested as strict JSON."""
 from __future__ import annotations
 

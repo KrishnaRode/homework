@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/syllabus/scraper.py
+#  Description: Optional syllabus scraper extension point (not required at runtime).
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Scraper-ready architecture. PrepWell does NOT depend on live scraping to run.
 
 This module is a clean extension point: implement `scrape_to_syllabus` against a

@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/components/games/Glyph.tsx
+ *  Description: Shared SVG glyph renderer for the brain games.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import type { Glyph as GlyphData } from "@/lib/brainGames";
 
 // Pure-SVG renderer for a Glyph (shape + color + rotation + scale).

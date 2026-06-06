@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/lib/api.ts
+ *  Description: Typed fetch wrapper for the backend API.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { clearSession, getSession } from "./auth";
 
 export const API_BASE =

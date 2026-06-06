@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/storage/seed.py
+#  Description: First-run seeding of demo students, admin, and database tables.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Seed the demo admin + sample students on first run. Idempotent."""
 from __future__ import annotations
 

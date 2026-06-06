@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/components/games/OddOneOut.tsx
+ *  Description: Odd-one-out brain game.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useMemo, useState } from "react";
 import { genOddOneOut, type GameOutcome } from "@/lib/brainGames";
 import Glyph from "./Glyph";

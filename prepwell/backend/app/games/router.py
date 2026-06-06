@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/games/router.py
+#  Description: Brain-games catalog API (warm-up puzzles, never academically scored).
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Brain Games API — a standalone reasoning-games track.
 
 Games are generated and played entirely client-side (local-first, no LLM, no network).

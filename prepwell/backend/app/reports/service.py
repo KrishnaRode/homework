@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/reports/service.py
+#  Description: Progress report assembly from history and mental model.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Student reports: JSON data + a parent-friendly standalone HTML page."""
 from __future__ import annotations
 

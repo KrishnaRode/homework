@@ -1,3 +1,9 @@
+/* =============================================================================
+ *  File:        frontend/lib/types.ts
+ *  Description: Shared TypeScript types mirroring the backend schemas.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 export type Role = "student" | "admin";
 
 export interface Session {

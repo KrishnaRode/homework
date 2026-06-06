@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/ollama_client/client.py
+#  Description: Thin local Ollama HTTP client (status, models, JSON generation).
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Ollama integration: health check + strict-JSON generation with retry & repair."""
 from __future__ import annotations
 

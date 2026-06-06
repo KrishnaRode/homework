@@ -1,3 +1,9 @@
+/* =============================================================================
+ *  File:        frontend/lib/brainGames.ts
+ *  Description: Brain-game catalog and procedural puzzle generators.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 // Brain Games — deterministic, client-side reasoning puzzle generators.
 // No LLM, no network: everything is generated locally for instant, offline play.
 

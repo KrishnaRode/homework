@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/schemas.py
+#  Description: Pydantic models shared across the API (Question, Evaluation, etc.).
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Pydantic schemas shared across the API."""
 from __future__ import annotations
 

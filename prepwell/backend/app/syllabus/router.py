@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/syllabus/router.py
+#  Description: Syllabus API: boards, classes, subjects, chapters, and topics.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Public syllabus reads (boards, classes, subjects, topics)."""
 from __future__ import annotations
 

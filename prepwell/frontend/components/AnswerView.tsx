@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/components/AnswerView.tsx
+ *  Description: Post-answer feedback: correctness, explanation, and next/stop.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import type { Evaluation } from "@/lib/types";
 
 function Section({ label, children }: { label: string; children: React.ReactNode }) {

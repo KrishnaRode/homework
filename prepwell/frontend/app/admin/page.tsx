@@ -1,5 +1,10 @@
 "use client";
-
+/* =============================================================================
+ *  File:        frontend/app/admin/page.tsx
+ *  Description: Admin console: roster management and credential generation.
+ *  Developer:   Krishna Rode
+ *  Version:     1
+ * ============================================================================= */
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { BrandHeader } from "@/components/Brand";

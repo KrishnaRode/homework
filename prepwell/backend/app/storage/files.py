@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/storage/files.py
+#  Description: JSON file storage: mental models, per-session question cache.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """JSON-file storage for mental models, full question objects, and the gen cache."""
 from __future__ import annotations
 

@@ -1,3 +1,9 @@
+# =============================================================================
+#  File:        backend/app/question_engine/service.py
+#  Description: Question generation: prompt -> Ollama -> validate -> de-duplicate.
+#  Developer:   Krishna Rode
+#  Version:     1
+# =============================================================================
 """Question generation: build prompt -> Ollama -> validate -> de-duplicate -> persist."""
 from __future__ import annotations
 
