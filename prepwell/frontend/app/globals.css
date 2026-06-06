@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+/* ── Design tokens — playful + premium. Bright, friendly colours for kids while
+   keeping clean, polished surfaces. Utilities like bg-panel, text-text-muted,
+   border-border, text-accent are generated from these. ── */
+@theme {
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-panel: var(--panel);
+  --color-panel-hover: var(--panel-hover);
+  --color-border: var(--border);
+  --color-border-soft: var(--border-soft);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-text-faint: var(--text-faint);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --color-joy-pink: var(--joy-pink);
+  --color-joy-yellow: var(--joy-yellow);
+  --color-joy-teal: var(--joy-teal);
+  --color-joy-orange: var(--joy-orange);
+  --color-joy-green: var(--joy-green);
+  --color-joy-blue: var(--joy-blue);
+  --color-joy-red: var(--joy-red);
+  --color-joy-purple: var(--joy-purple);
+
+  --font-sans: "Nunito", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: ui-rounded, "SF Pro Rounded", "Baloo 2", "Nunito", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+}
+
+/* Dark (default) — deep "night sky" indigo, not flat black, so colours pop. */
+:root {
+  --bg: #0c0a1d;
+  --bg-soft: #131129;
+  --panel: #181534;
+  --panel-hover: #211d44;
+  --border: #2c2856;
+  --border-soft: #221e44;
+  --text: #f1eefb;
+  --text-muted: #b3acd6;
+  --text-faint: #756f99;
+  --accent: #8b7bff;
+  --accent-soft: #b79bff;
+  --good: #4ade80;
+  --bad: #ff7a8a;
+
+  --joy-pink: #ff7eb6;
+  --joy-yellow: #ffd166;
+  --joy-teal: #2ec4b6;
+  --joy-orange: #ff9f6b;
+  --joy-green: #5fe0a0;
+  --joy-blue: #6d8bff;
+  --joy-red: #ff6b6b;
+  --joy-purple: #c084fc;
+}
+
+/* Light — soft, warm pastel paper. Cheerful but easy on young eyes. */
+:root[data-theme="light"] {
+  --bg: #fbf7ff;
+  --bg-soft: #f3eeff;
+  --panel: #ffffff;
+  --panel-hover: #f6f1ff;
+  --border: #e9e2fb;
+  --border-soft: #f0ebfc;
+  --text: #221b3a;
+  --text-muted: #5d5680;
+  --text-faint: #9890b5;
+  --accent: #6d5dfc;
+  --accent-soft: #9b86ff;
+  --good: #16a34a;
+  --bad: #e84d5f;
+
+  --joy-pink: #ff6fae;
+  --joy-yellow: #ffc94d;
+  --joy-teal: #22b8a8;
+  --joy-orange: #ff924d;
+  --joy-green: #34c98a;
+  --joy-blue: #5d7bff;
+  --joy-red: #fb5e64;
+  --joy-purple: #a855f7;
+}
+
+* { border-color: var(--border); }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Rounded, friendly display font for all headings + the brand. */
+h1, h2, h3, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+/* Ambient multi-colour glow — playful aurora behind everything. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(45% 40% at 12% 6%, color-mix(in srgb, var(--joy-blue) 26%, transparent), transparent 70%),
+    radial-gradient(42% 38% at 88% 10%, color-mix(in srgb, var(--joy-pink) 22%, transparent), transparent 70%),
+    radial-gradient(52% 46% at 84% 88%, color-mix(in srgb, var(--joy-teal) 20%, transparent), transparent 70%),
+    radial-gradient(46% 42% at 14% 92%, color-mix(in srgb, var(--joy-yellow) 18%, transparent), transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Playful animated brand (navbar) ──────────────────────────────
+   The PrepWell wordmark shimmers through the joy palette while a tiny
+   mascot peeks out from behind the logo and ducks back — a calm
+   peek-a-boo that stays in the navbar instead of cluttering the page. */
+.brand-word {
+  background: linear-gradient(
+    90deg,
+    var(--joy-blue),
+    var(--joy-pink),
+    var(--joy-purple),
+    var(--joy-teal),
+    var(--joy-blue)
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: brand-sheen 7s linear infinite;
+}
+@keyframes brand-sheen {
+  to { background-position: 260% 0; }
+}
+
+/* Logo tile gives a gentle wave on hover. */
+.brand-logo-wrap { position: relative; display: inline-grid; }
+.brand-tile { position: relative; z-index: 1; }
+.brand:hover .brand-tile { animation: brand-wave 0.7s ease; }
+@keyframes brand-wave {
+  0%, 100% { transform: rotate(0); }
+  30% { transform: rotate(-10deg); }
+  60% { transform: rotate(8deg); }
+}
+
+/* Peek-a-boo stage: clips the mascot so it appears to rise from behind the
+   logo's top edge. Lives behind the tile (z-index 0); tile sits in front. */
+.brand-stage {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  width: 30px;
+  height: 26px;
+  transform: translateX(-50%);
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+.brand-peek {
+  display: block;
+  width: 30px;
+  height: 30px;
+  transform: translateY(8%); /* resting peek (also the reduced-motion state) */
+  animation: brand-peekaboo 6.5s ease-in-out infinite;
+  transition: transform 0.25s ease;
+}
+.brand:hover .brand-peek {
+  animation: none;
+  transform: translateY(-6%) rotate(-4deg); /* pop fully up + tilt on hover */
+}
+@keyframes brand-peekaboo {
+  0%, 14% { transform: translateY(105%); }       /* hidden behind the tile */
+  30%, 58% { transform: translateY(6%) rotate(2deg); }  /* peeking */
+  74%, 100% { transform: translateY(105%); }     /* duck back down */
+}
+.brand-eyes {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: brand-blink 4.5s steps(1, end) infinite;
+}
+@keyframes brand-blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  94% { transform: scaleY(0.12); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-rise { animation: rise 0.4s ease both; }
+
+@keyframes pulse { 50% { opacity: 0.5; } }
+.animate-soft-pulse { animation: pulse 1.6s ease-in-out infinite; }
+
+/* Gentle attention-grabbing wiggle for fun accents. */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+.animate-wiggle { animation: wiggle 2.2s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+.card {
+  background: color-mix(in srgb, var(--panel) 88%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px -16px color-mix(in srgb, var(--accent-soft) 55%, transparent);
+  backdrop-filter: blur(6px);
+}
+
+/* Colourful card variant — set --tint (e.g. var(--joy-green)) to give a section
+   its own playful colour: tinted border, matching glow, and a soft wash. */
+.card-pop {
+  background:
+    linear-gradient(160deg, color-mix(in srgb, var(--tint) 14%, transparent), transparent 60%),
+    color-mix(in srgb, var(--panel) 90%, transparent);
+  border: 1px solid color-mix(in srgb, var(--tint) 42%, var(--border));
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 32px -18px color-mix(in srgb, var(--tint) 80%, transparent);
+  backdrop-filter: blur(6px);
+}

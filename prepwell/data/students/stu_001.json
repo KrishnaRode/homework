@@ -1,0 +1,102 @@
+{
+  "student_id": "stu_001",
+  "name": "Aarav",
+  "class": "5",
+  "overall_index": 58,
+  "confidence_index": 49,
+  "speed_index": 91,
+  "accuracy_index": 51,
+  "reasoning_index": 50,
+  "topic_mastery": {
+    "maths.fractions.adding_fractions": {
+      "mastery": 61,
+      "attempts": 14,
+      "correct": 9,
+      "wrong_patterns": [
+        "LCM confusion",
+        "simplification missed"
+      ],
+      "last_seen": "2026-06-05T10:12:00Z",
+      "next_difficulty": 3,
+      "repeat_lock": []
+    },
+    "maths.understanding_fractions": {
+      "title": "Understanding Fractions",
+      "mastery": 38,
+      "attempts": 1,
+      "correct": 0,
+      "wrong_patterns": [
+        "Students might forget to think about what part of the pizza is left or confuse t"
+      ],
+      "last_seen": "2026-06-06T08:22:46+00:00",
+      "next_difficulty": 2,
+      "repeat_lock": [
+        "0497536c6e7e2027"
+      ]
+    },
+    "english.comprehension": {
+      "title": "Reading Comprehension",
+      "mastery": 50,
+      "attempts": 5,
+      "correct": 2,
+      "wrong_patterns": [
+        "Confusing with other plants.",
+        "Misreading the number."
+      ],
+      "last_seen": "2026-06-06T14:20:02+00:00",
+      "next_difficulty": 2,
+      "repeat_lock": [
+        "edc4454f3fe15068",
+        "2d65c8e625b351fd",
+        "66f97792bf65ac77",
+        "3c2b827af423fd7c"
+      ]
+    }
+  },
+  "learning_style": {
+    "prefers_visual": true,
+    "needs_step_by_step": true,
+    "gets_fast_questions_wrong": false
+  },
+  "recent_mistakes": [
+    {
+      "topic": "Understanding Fractions",
+      "issue": "Students might forget to think about what part of the pizza is left or confuse t",
+      "at": "2026-06-06T08:22:46+00:00"
+    },
+    {
+      "topic": "Reading Comprehension",
+      "issue": "Confusing with other plants.",
+      "at": "2026-06-06T14:17:29+00:00"
+    },
+    {
+      "topic": "Reading Comprehension",
+      "issue": "Confusing with other plants.",
+      "at": "2026-06-06T14:20:02+00:00"
+    },
+    {
+      "topic": "Reading Comprehension",
+      "issue": "Misreading the number.",
+      "at": "2026-06-06T14:20:02+00:00"
+    }
+  ],
+  "recommended_next_topics": [
+    "maths.understanding_fractions",
+    "english.comprehension",
+    "maths.fractions.adding_fractions"
+  ],
+  "brain": {
+    "points": 80,
+    "games_played": 1,
+    "current_streak": 1,
+    "best_streak": 1,
+    "by_game": {
+      "memory_grid": {
+        "played": 1,
+        "best": 80,
+        "wins": 1
+      }
+    },
+    "last_played": "2026-06-06T12:34:30+00:00"
+  }
+}

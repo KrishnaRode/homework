@@ -1,0 +1,28 @@
+{
+  "student_id": "stu_002",
+  "name": "Diya",
+  "class": "5",
+  "overall_index": 78,
+  "confidence_index": 80,
+  "speed_index": 72,
+  "accuracy_index": 82,
+  "reasoning_index": 75,
+  "topic_mastery": {
+    "english.grammar.tenses": {
+      "mastery": 84,
+      "attempts": 20,
+      "correct": 17,
+      "wrong_patterns": ["future perfect mix-up"],
+      "last_seen": "2026-06-05T16:40:00Z",
+      "next_difficulty": 4,
+      "repeat_lock": []
+    }
+  },
+  "learning_style": {
+    "prefers_visual": false,
+    "needs_step_by_step": false,
+    "gets_fast_questions_wrong": false
+  },
+  "recent_mistakes": [],
+  "recommended_next_topics": ["english.reading.main_idea"]
+}
