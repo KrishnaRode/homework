@@ -12,14 +12,21 @@ whole thing to an AI coding agent to generate the next product on top of this te
 ## ▼ Fill these in first
 
 ```
-{{PRODUCT_NAME}}    = e.g. "SQL Query Explainer"
-{{TAGLINE}}         = e.g. "Understand any SQL query using free local AI."
-{{PRIMARY_INPUT}}   = e.g. "a SQL query"
-{{PRIMARY_ACTION}}  = e.g. "Explain SQL"
-{{OLLAMA_MODEL}}    = e.g. "qwen2.5-coder"
-{{API_ROUTE}}       = e.g. "/api/explain-sql"
-{{OUTPUT_SCHEMA}}   = the JSON shape the model must return (see example in the appendix)
+{{PRODUCT_NAME}}    = "PrepWell — Learning Agent"
+{{TAGLINE}}         = "Prepare smarter. Learn deeper."
+{{PRIMARY_INPUT}}   = "a student's class + subject + topic, then their answers in a live session"
+{{PRIMARY_ACTION}}  = "Practice (Start Adaptive Session)"
+{{OLLAMA_MODEL}}    = "llama3.2:3b"   // installed locally; override with PREPWELL_MODEL
+{{API_ROUTE}}       = "FastAPI /api — core loop: POST /api/session/next, POST /api/session/answer"
+{{OUTPUT_SCHEMA}}   = see project.md §3 (generated-question + answer-evaluation schemas)
 ```
+
+> **PrepWell is bigger than the single-screen template.** It is a two-service,
+> local-first learning *platform* (Next.js + FastAPI + Ollama + SQLite/JSON). The brand,
+> design system, and "the answer teaches" philosophy below still apply, but the full,
+> authoritative 17-section build brief lives in [`prepwell/BUILD_BRIEF.md`](prepwell/BUILD_BRIEF.md)
+> and the contract in [`project.md`](project.md). Treat those as the source of truth for
+> architecture; treat the sections below as the design/quality bar.
 
 ---
 

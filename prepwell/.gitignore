@@ -1,0 +1,20 @@
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+
+# Local runtime data (regenerated; seed files are kept)
+data/prepwell.db
+data/prepwell.db-wal
+data/prepwell.db-shm
+data/question_history/*.jsonl
+data/generated_cache/*.json
+data/students/stu_[!0]*.json
+
+# env
+backend/.env
+
+# Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
